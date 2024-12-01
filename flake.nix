@@ -1,5 +1,4 @@
 {
-    description = "nix development shell for ssmif clickhouse db";
     inputs = {
         nixpkgs.url = "nixpkgs/nixos-unstable";
         flake-utils.url = "github:numtide/flake-utils";
@@ -14,8 +13,7 @@
                 packages = with pkgs; [
                     nodejs_23
                 ];
-                shellHook = ''
-                '';
+                shellHook = "zsh";
             };
         }
     );
