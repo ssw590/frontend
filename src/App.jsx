@@ -42,7 +42,7 @@ function App() {
 
   return (
     <>
-      <h1>Online market place</h1>
+      <h1>Online marketplace</h1>
       <form onSubmit={handleSearch}>
         <input type='text' placeholder='search for a product...' ref={searchRef}></input>
         <button type='submit'>Search</button>
