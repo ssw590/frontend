@@ -4,7 +4,6 @@ WORKDIR /app
 
 COPY . .
 
-## Install dependencies with `--immutable` to ensure reproducibility.
 RUN npm ci
 
 RUN npm run build

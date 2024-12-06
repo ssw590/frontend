@@ -16,7 +16,9 @@ function App() {
   const displayRef = useRef()
   const [results, setResults] = useState([])
 
-  const backendUrl = import.meta.env.VITE_BACKEND_URL
+  const backendUrl = window.location.protocol + "//" + window.location.host + import.meta.env.VITE_BACKEND_URL
+
+  console.log(backendUrl)
 
   const handleSearch = async (e) => {
 
