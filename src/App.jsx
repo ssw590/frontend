@@ -18,8 +18,6 @@ function App() {
 
   const backendUrl = window.location.protocol + "//" + window.location.host + import.meta.env.VITE_BACKEND_URL
 
-  console.log(backendUrl)
-
   const handleSearch = async (e) => {
 
     e.preventDefault()
@@ -32,11 +30,8 @@ function App() {
 
     const items = await response.json()
 
-    console.log(items)
+    displayRef.current.textContent = "Search results for: " + searchRef.current.value
 
-    // XSS
-    displayRef.current.innerHTML = "Search results for: " + searchRef.current.value
-    
     setResults(items)
   }
 
